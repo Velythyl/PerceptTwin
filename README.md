@@ -38,7 +38,5 @@ Please cite us using
 
 ```
 
-We would like to thank the Holodeck authors for their code release. If you use this codebase, please also cite [https://github.com/allenai/Holodeck](https://github.com/allenai/Holodeck).
-
-Likewise, this work would not have been possible without [https://concept-graphs.github.io/](https://concept-graphs.github.io/), so please also cite said work.
+We would like to thank the Holodeck authors for their code release. If you use this codebase, please also cite [https://github.com/allenai/Holodeck](https://github.com/allenai/Holodeck). Please also cite  [https://concept-graphs.github.io/](https://concept-graphs.github.io/).
 
