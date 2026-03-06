@@ -1,0 +1,57 @@
+# @package hydra.launcher
+partition: long-cpu
+_target_: hydra_plugins.hydra_submitit_launcher.submitit_launcher.SlurmLauncher
+cpus_per_task: 6
+mem_gb: 30
+tasks_per_node: 1
+stderr_to_stdout: False
+gres: gpu:0 #gpu:32gb:1 # gpu:rtx8000:1 # No MIG: gpu:32gb:1
+submitit_folder: ${hydra.sweep.dir}/submitit/%j
+timeout_min: 1440 # 2 days: 2880 ; 12h : 720 ; 1 day: 1440
+nodes: 1
+name: ${hydra.job.name}
+array_parallelism: 10 # max num of tasks to run in parallel (via job array)
+setup:
+  - "export WANDB_DIR=${hydra.sweep.dir}"
+  - "export HYDRA_SWEEP_DIR=${hydra.sweep.dir}"
+  #- "export BREAK=False"
+  #- "export HF_HOME=/network/scratch/c/charlie.gauthier/hfcache"
+  # WANDB ?
+  - 'export TQDM_DISABLE=1'
+  #- "module load python/3.10"
+  #- "module load cuda/12.1.1/cudnn/9.3"
+  #- "module load libffi"
+  #- "ulimit -n 16384"
+  #- "export XDG_RUNTIME_DIR=/tmp"
+  #- "[ \"$MY_STRING\" = \"TRELLIS\" ] && echo \"Running TRELLIS\" || echo \"Not running TRELLIS\""
+  #- '[ "${assetlookup.method}" = "TRELLIS" ] && { cd $HOME/TRELLIS && source venv2/bin/activate && huggingface-cli login --token ${secrets.hf_token} && python3 flaskserver.py & } || echo "Not running TRELLIS"'
+  #- '[ "${assetlookup.method}" = "TRELLIS" ] &&  sleep 180 || echo "Not running TRELLIS"'
+  #- "mkdir -p /tmp/.X11-unix"
+  - "source $HOME/Holodeck/venv/bin/activate"
+  - "export PYTHONPATH=..:$PYTHONPATH" #:$HOME/Holodeck/hippo:$PYTHONPATH"
+  #- "export TMPFILE=$(mktemp)"
+  #- 'Xvfb -screen 0 180x180x24 -displayfd 3 3> "$TMPFILE" &'
+  #- "sleep 30"
+  #- "echo DISPLAY IS"
+  #- 'export DISPLAY=:$(cat "$TMPFILE")'
+  #- "echo $DISPLAY"
+  #- "sleep $((RANDOM % 30))"
+  - 'export HYDRA_SPOOF="toplevel"'
+  - "export CUDA_VISIBLE_DEVICES=-1"
+
+# module load cuda/12.1.1/cudnn
+# module load python/3.10
+#  python3.9 -m pip install --upgrade "jaxlib==0.4.13+cuda11.cudnn86" "jax[cuda11_pip]==0.4.13" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --no-cache
+# pip3 install -r requirements.txt
+# pip3 install flax==0.7.4
+#  python3.9 -m pip install --upgrade "jaxlib[cuda11_pip]==0.4.13" "jax[cuda11_pip]==0.4.13" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --no-cache
+# pip install hydra-submitit-launcher --upgrade
+# python3 main.py --multirun hydra/launcher=sbatch +hydra/sweep=sbatch wandb.seed=1,2
+# python3 main.py --multirun hydra/launcher=sbatch +hydra/sweep=sbatch sim=sim10k_10000 wandb.seed=1,2,3,4,5 sim.bad_init=False,True dist=four_bananas,rastrigin10d,rastrigin2d,michalewicz10d,michalewicz2d,five_mvn_dim10,rosenbrock10d,rosenbrock2d adapt=indep,mape_single,mape_test,haario,random_walk,mala wandb.project=milaclustermbrma
+
+
+#   - 'export WANDB_WATCH="false"'
+#  - 'export WANDB__SERVICE_WAIT=300'
+ # - 'export WANDB_MODE="offline"'
+#
+

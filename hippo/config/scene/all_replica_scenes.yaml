@@ -1,0 +1,13 @@
+wall_height: 10
+pad: 0.25
+remove_obj_name_substr: ["floor", "rug", "wall", "ceiling", "corner", "carpet", "window", "door", "background"]  # removes any CG obj that contains any of the substrings in filter_obs
+remove_obj_desc_substr: [""]
+statistical_pcd_denoise_std: 1
+floor_material:  "PVCLit"
+wall_material: "PVCLit"
+
+topdown_camera_y: 4 #"bounds_y"
+
+
+num_scenes_to_generate: 1
+scene_generation_method: "in_order"

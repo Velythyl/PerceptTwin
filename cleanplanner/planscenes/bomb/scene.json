@@ -1,0 +1,970 @@
+{
+    "doors": [],
+    "metadata": {
+        "agent": {
+            "horizon": 30,
+            "position": {
+                "x": 0.5,
+                "y": 0.95,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+            },
+            "standing": true
+        },
+        "roomSpecId": "Living Room",
+        "schema": "1.0.0",
+        "warnings": {},
+        "agentPoses": {
+            "arm": {
+                "horizon": 30,
+                "position": {
+                    "x": 0.5,
+                    "y": 0.95,
+                    "z": 0.5
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 90,
+                    "z": 0
+                },
+                "standing": true
+            },
+            "default": {
+                "horizon": 30,
+                "position": {
+                    "x": 0.5,
+                    "y": 0.95,
+                    "z": 0.5
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 90,
+                    "z": 0
+                },
+                "standing": true
+            },
+            "locobot": {
+                "horizon": 30,
+                "position": {
+                    "x": 0.5,
+                    "y": 0.95,
+                    "z": 0.5
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 90,
+                    "z": 0
+                }
+            },
+            "stretch": {
+                "horizon": 30,
+                "position": {
+                    "x": 0.5,
+                    "y": 0.95,
+                    "z": 0.5
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 90,
+                    "z": 0
+                },
+                "standing": true
+            }
+        }
+    },
+    "objects": [
+        {
+            "object_name": "decorated bottle",
+            "object_description": "bottle with a knitted cover and googly eyes",
+            "roomId": "-4253",
+            "_is_planar_according_to_llm": false,
+            "_is_objaverse_asset": [
+                true
+            ],
+            "_found_assetIds": [
+                "f8dd97c9"
+            ],
+            "_found_sizes": [
+                [
+                    0.6109857261180878,
+                    0.9996613639814314,
+                    0.316763237118721
+                ]
+            ],
+            "_found_scores": [
+                1
+            ],
+            "_desired_size": [
+                0.6606403402984142,
+                1.7365474998950958,
+                0.9988782405853271
+            ],
+            "_id": "5bb1",
+            "_assetMetadata": {},
+            "_skill_metadata": [
+                "can be broken",
+                "can be considered dirty or clean",
+                "can be opened and closed",
+                "can be picked up",
+                "objects can't or shouldn't be put down on this",
+                "cannot be sliced in most situations",
+                "cannot use this object to slice things with",
+                "cannot be turned on or off",
+                "objects can be put down on this"
+            ],
+            "_cg_paths": {
+                "mask": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/0/mask"
+                ],
+                "rgb": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/0/rgb"
+                ]
+            },
+            "_assets_dir": [
+                "/home/mila/c/charlie.gauthier/.TRELLIS/home/mila/c/charlie/gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/0/masked/convert"
+            ],
+            "material": null,
+            "layer": "Procedural0",
+            "kinematic": true,
+            "assetId": "decorated bottle-5bb1-f8dd",
+            "id": "decorated bottle-5bb1-f8dd",
+            "size": [
+                0.6109857261180878,
+                1.7365474998950958,
+                0.316763237118721
+            ],
+            "position": {
+                "x": 6.264782065365016,
+                "y": 0.9189466772137801,
+                "z": 5.8423724547124065
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "IS_HIPPO": true
+        },
+        {
+            "object_name": "laptop",
+            "object_description": "closed dark-colored laptop with an Apple logo on the back",
+            "roomId": "-4253",
+            "_is_planar_according_to_llm": true,
+            "_is_objaverse_asset": [
+                true
+            ],
+            "_found_assetIds": [
+                "ca06e41d"
+            ],
+            "_found_sizes": [
+                [
+                    1.012149453163147,
+                    1.0000349218171323,
+                    1.8035632371902466
+                ]
+            ],
+            "_found_scores": [
+                1
+            ],
+            "_desired_size": [
+                0.38343575596809387,
+                0.2178579866886139,
+                0.4989914894104004
+            ],
+            "_id": "6db6",
+            "_assetMetadata": {},
+            "_skill_metadata": [
+                "can be broken",
+                "can be considered dirty or clean",
+                "can be opened and closed",
+                "can be picked up",
+                "objects can't or shouldn't be put down on this",
+                "cannot be sliced in most situations",
+                "cannot use this object to slice things with",
+                "can be turned on/off",
+                "objects can be put down on this"
+            ],
+            "_cg_paths": {
+                "mask": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/1/mask"
+                ],
+                "rgb": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/1/rgb"
+                ]
+            },
+            "_assets_dir": [
+                "/home/mila/c/charlie.gauthier/.TRELLIS/home/mila/c/charlie/gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/1/masked/convert"
+            ],
+            "material": null,
+            "layer": "Procedural0",
+            "kinematic": true,
+            "assetId": "laptop-6db6-ca06",
+            "id": "laptop-6db6-ca06",
+            "size": [
+                1.012149453163147,
+                0.2178579866886139,
+                1.8035632371902466
+            ],
+            "position": {
+                "x": 5.361167805387497,
+                "y": 1.0859766200833205,
+                "z": 6.284660823562499
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "IS_HIPPO": true
+        },
+        {
+            "object_name": "cardboard box",
+            "object_description": "cardboard box labeled Universal Robots with various icons on the side",
+            "roomId": "-4253",
+            "_is_planar_according_to_llm": false,
+            "_is_objaverse_asset": [
+                true
+            ],
+            "_found_assetIds": [
+                "3a307858"
+            ],
+            "_found_sizes": [
+                [
+                    0.980356901884079,
+                    1.0002467781856854,
+                    0.7185667455196381
+                ]
+            ],
+            "_found_scores": [
+                1
+            ],
+            "_desired_size": [
+                0.4882364273071289,
+                0.9988081455230713,
+                0.803581714630127
+            ],
+            "_id": "4064",
+            "_assetMetadata": {},
+            "_skill_metadata": [
+                "can be broken",
+                "can be considered dirty or clean",
+                "can be opened and closed",
+                "can be picked up",
+                "objects can be put down on this",
+                "can be sliced",
+                "cannot use this object to slice things with",
+                "cannot be turned on or off",
+                "objects can be put down on this"
+            ],
+            "_cg_paths": {
+                "mask": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/4/mask"
+                ],
+                "rgb": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/4/rgb"
+                ]
+            },
+            "_assets_dir": [
+                "/home/mila/c/charlie.gauthier/.TRELLIS/home/mila/c/charlie/gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/4/masked/convert"
+            ],
+            "material": null,
+            "layer": "Procedural0",
+            "kinematic": true,
+            "assetId": "cardboard box-4064-3a30",
+            "id": "cardboard box-4064-3a30",
+            "size": [
+                0.980356901884079,
+                0.9988081455230713,
+                0.7185667455196381
+            ],
+            "position": {
+                "x": 5.435480978671017,
+                "y": 0.5364896156400496,
+                "z": 6.316463540409192
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "IS_HIPPO": true
+        },
+        {
+            "object_name": "bomb",
+            "object_description": "transparent container with a green lid and handle featuring a black lever on top and a blue base",
+            "roomId": "-4253",
+            "_is_planar_according_to_llm": false,
+            "_is_objaverse_asset": [
+                true
+            ],
+            "_found_assetIds": [
+                "f317b293"
+            ],
+            "_found_sizes": [
+                [
+                    0.8985896706581116,
+                    0.9999999957093983,
+                    0.5742798149585724
+                ]
+            ],
+            "_found_scores": [
+                1
+            ],
+            "_desired_size": [
+                0.25680649280548096,
+                0.2275315523147583,
+                0.3078300356864929
+            ],
+            "_id": "3031",
+            "_assetMetadata": {},
+            "_skill_metadata": [
+                "can be broken",
+                "can be considered dirty or clean",
+                "can be opened and closed",
+                "can be picked up",
+                "objects can be put down on this",
+                "cannot be sliced in most situations",
+                "cannot use this object to slice things with",
+                "can only be turned on",
+                "objects can be put down on this"
+            ],
+            "_cg_paths": {
+                "mask": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/32/mask"
+                ],
+                "rgb": [
+                    "/home/mila/c/charlie.gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/32/rgb"
+                ]
+            },
+            "_assets_dir": [
+                "/home/mila/c/charlie.gauthier/.TRELLIS/home/mila/c/charlie/gauthier/Holodeck/hippo/datasets/realscenes/i_miguel_bomb_5/segments/32/masked/convert"
+            ],
+            "material": null,
+            "layer": "Procedural0",
+            "kinematic": true,
+            "assetId": "bomb-3031-f317",
+            "id": "bomb-3031-f317",
+            "size": [
+                0.8985896706581116,
+                0.2275315523147583,
+                0.5742798149585724
+            ],
+            "position": {
+                "x": 5.144302243230636,
+                "y": 0.1101548903179144,
+                "z": 8.516248781279414
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "IS_HIPPO": true
+        }
+    ],
+    "proceduralParameters": {
+        "ceilingColor": {
+            "b": 1,
+            "g": 1,
+            "r": 1
+        },
+        "ceilingMaterial": {
+            "name": "PVCLit"
+        },
+        "floorColliderThickness": 1.0,
+        "lights": [
+            {
+                "id": "mainlight0",
+                "type": "point",
+                "position": {
+                    "x": 0.5,
+                    "y": 3,
+                    "z": 0.5
+                },
+                "intensity": 0.1,
+                "range": 100,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "roomId": "living room",
+                "layer": "Procedural0",
+                "cullingMaskOff": [
+                    "Procedural1",
+                    "Procedural2",
+                    "Procedural3"
+                ]
+            },
+            {
+                "id": "mainlight1",
+                "type": "point",
+                "position": {
+                    "x": 11.121769428253174,
+                    "y": 3,
+                    "z": 0.5
+                },
+                "intensity": 0.1,
+                "range": 100,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "roomId": "living room",
+                "layer": "Procedural0",
+                "cullingMaskOff": [
+                    "Procedural1",
+                    "Procedural2",
+                    "Procedural3"
+                ]
+            },
+            {
+                "id": "mainlight2",
+                "type": "point",
+                "position": {
+                    "x": 0.5,
+                    "y": 3,
+                    "z": 13.111855804920197
+                },
+                "intensity": 0.1,
+                "range": 100,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "roomId": "living room",
+                "layer": "Procedural0",
+                "cullingMaskOff": [
+                    "Procedural1",
+                    "Procedural2",
+                    "Procedural3"
+                ]
+            },
+            {
+                "id": "mainlight3",
+                "type": "point",
+                "position": {
+                    "x": 11.121769428253174,
+                    "y": 3,
+                    "z": 13.111855804920197
+                },
+                "intensity": 0.1,
+                "range": 100,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "roomId": "living room",
+                "layer": "Procedural0",
+                "cullingMaskOff": [
+                    "Procedural1",
+                    "Procedural2",
+                    "Procedural3"
+                ]
+            },
+            {
+                "id": "mainlight3",
+                "type": "point",
+                "position": {
+                    "x": 5.810884714126587,
+                    "y": 3,
+                    "z": 6.805927902460098
+                },
+                "intensity": 0.1,
+                "range": 100,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "roomId": "living room",
+                "layer": "Procedural0",
+                "cullingMaskOff": [
+                    "Procedural1",
+                    "Procedural2",
+                    "Procedural3"
+                ]
+            }
+        ],
+        "receptacleHeight": 0.7,
+        "reflections": [],
+        "skyboxColor": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+        }
+    },
+    "rooms": [
+        {
+            "ceilings": [],
+            "children": [],
+            "vertices": [
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    0.0,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    0.0
+                ]
+            ],
+            "floorMaterial": {
+                "name": "PVCLit"
+            },
+            "floorPolygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "id": "-4253",
+            "roomType": "-4253",
+            "floor_design": "pvclit",
+            "wall_design": "eggshelldrywall",
+            "full_vertices": [
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    0.0,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    0.0
+                ]
+            ],
+            "wallMaterial": {
+                "name": "EggshellDrywall"
+            }
+        }
+    ],
+    "walls": [
+        {
+            "id": "wall|-4253|west|0|exterior",
+            "roomId": "-4253",
+            "material": {
+                "name": "Walldrywall4Tiled"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "connected_rooms": [],
+            "width": 13.611855804920197,
+            "height": 3,
+            "direction": "west",
+            "segment": [
+                [
+                    0.0,
+                    13.611855804920197
+                ],
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        },
+        {
+            "id": "wall|-4253|west|0",
+            "roomId": "-4253",
+            "material": {
+                "name": "EggshellDrywall"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 13.611855804920197
+                }
+            ],
+            "connected_rooms": [],
+            "width": 13.611855804920197,
+            "height": 3,
+            "direction": "west",
+            "segment": [
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    0.0,
+                    13.611855804920197
+                ]
+            ],
+            "connect_exterior": "wall|-4253|west|0|exterior"
+        },
+        {
+            "id": "wall|-4253|north|1|exterior",
+            "roomId": "-4253",
+            "material": {
+                "name": "Walldrywall4Tiled"
+            },
+            "polygon": [
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 13.611855804920197
+                }
+            ],
+            "connected_rooms": [],
+            "width": 11.621769428253174,
+            "height": 3,
+            "direction": "north",
+            "segment": [
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ],
+                [
+                    0.0,
+                    13.611855804920197
+                ]
+            ]
+        },
+        {
+            "id": "wall|-4253|north|1",
+            "roomId": "-4253",
+            "material": {
+                "name": "EggshellDrywall"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 13.611855804920197
+                }
+            ],
+            "connected_rooms": [],
+            "width": 11.621769428253174,
+            "height": 3,
+            "direction": "north",
+            "segment": [
+                [
+                    0.0,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ]
+            ],
+            "connect_exterior": "wall|-4253|north|1|exterior"
+        },
+        {
+            "id": "wall|-4253|east|2|exterior",
+            "roomId": "-4253",
+            "material": {
+                "name": "Walldrywall4Tiled"
+            },
+            "polygon": [
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 13.611855804920197
+                }
+            ],
+            "connected_rooms": [],
+            "width": 13.611855804920197,
+            "height": 3,
+            "direction": "east",
+            "segment": [
+                [
+                    11.621769428253174,
+                    0.0
+                ],
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ]
+            ]
+        },
+        {
+            "id": "wall|-4253|east|2",
+            "roomId": "-4253",
+            "material": {
+                "name": "EggshellDrywall"
+            },
+            "polygon": [
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 13.611855804920197
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "connected_rooms": [],
+            "width": 13.611855804920197,
+            "height": 3,
+            "direction": "east",
+            "segment": [
+                [
+                    11.621769428253174,
+                    13.611855804920197
+                ],
+                [
+                    11.621769428253174,
+                    0.0
+                ]
+            ],
+            "connect_exterior": "wall|-4253|east|2|exterior"
+        },
+        {
+            "id": "wall|-4253|south|3|exterior",
+            "roomId": "-4253",
+            "material": {
+                "name": "Walldrywall4Tiled"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "connected_rooms": [],
+            "width": 11.621769428253174,
+            "height": 3,
+            "direction": "south",
+            "segment": [
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    11.621769428253174,
+                    0.0
+                ]
+            ]
+        },
+        {
+            "id": "wall|-4253|south|3",
+            "roomId": "-4253",
+            "material": {
+                "name": "EggshellDrywall"
+            },
+            "polygon": [
+                {
+                    "x": 11.621769428253174,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 11.621769428253174,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 3,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "connected_rooms": [],
+            "width": 11.621769428253174,
+            "height": 3,
+            "direction": "south",
+            "segment": [
+                [
+                    11.621769428253174,
+                    0.0
+                ],
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            "connect_exterior": "wall|-4253|south|3|exterior"
+        }
+    ],
+    "windows": [],
+    "wall_height": 3
+}

@@ -1,0 +1,159 @@
+perception:
+  _target_: concept_graphs.perception.PerceptionPipeline.PerceptionPipeline
+  segmentation_model: ???
+  segment_scoring_method: area
+  ft_extractor: ???
+  depth_trunc: ${dataset.depth_trunc}
+  inflate_bbox_px: 10
+  mask_subtract_contained: true
+  min_mask_area_px: 100
+  min_points_pcd: 100
+  crop_bg_color: null
+  debug_images: ${debug}
+  debug_dir: ${output_dir}/debug
+mapping:
+  object_factory:
+    denoising_callback:
+      _target_: concept_graphs.mapping.pcd_callbacks.callbacks.DBSCAN
+      eps: ${denoising_eps}
+      min_points: 10
+    downsampling_callback:
+      _target_: concept_graphs.mapping.pcd_callbacks.callbacks.VoxelDownSampling
+      voxel_size: ${voxel_size}
+    _target_: concept_graphs.mapping.Object.RunningAverageObjectFactory
+    segment_heap_size: 12
+    max_points_pcd: ${max_points_pcd}
+    semantic_mode: mean
+  similarity:
+    _target_: concept_graphs.mapping.similarity.Similarity.CombinedSimilarity
+    geometric_similarity:
+      _target_: concept_graphs.mapping.similarity.geometric.PointCloudOverlapClosestK
+      agg: max
+      eps: ${overlap_eps}
+      k: 10
+    semantic_similarity:
+      _target_: concept_graphs.mapping.similarity.semantic.CosineSimilarity01
+    geometric_sim_thresh: 0.0
+    semantic_sim_thresh: 0.0
+    sim_thresh: ${sim_thresh}
+  _target_: concept_graphs.mapping.ObjectMap.ObjectMap
+  n_min_segments: 3
+  min_points_pcd: 50
+  grace_min_segments: 30
+  filter_min_every: 10
+  self_merge_every: 5
+  device: ${device}
+  downsample_every: 5
+  denoise_every: -1
+segmentation:
+  _target_: concept_graphs.perception.segmentation.YoloMobileSAM.YoloMobileSAM
+  yolo_checkpoint_path: ${cache_dir}/yolov8s-world.pt
+  yolo_class_path: ${cache_dir}/scannet200_classes.txt
+  yolo_device: ${device}
+  sam_model_type: vit_t
+  sam_checkpoint_path: ${cache_dir}/mobile_sam.pt
+  sam_prompting: bbox
+  sam_device: ${device}
+  debug_images: ${debug}
+  debug_dir: ${output_dir}/debug
+vlm_caption:
+  _target_: concept_graphs.vlm.OpenAICaptioner.OpenAICaptioner
+  system_prompt: You are a helpful assistant that describes images in a few words.
+    You will be provided with up to 4 views of the same object. Describe the object
+    in the crops.
+  user_query: Describe the object.
+  max_images: 4
+  tag: false
+  bg_mask_mode: no_mask
+  allow_no_object_pred: true
+  no_object_prompt: If you believe there is no central object in the images or the
+    images depict a background element, output BACKGROUND.
+  force_reponse_prefix: true
+  prefix: The central object is
+  model: gpt-4o
+vlm_tag:
+  _target_: concept_graphs.vlm.OpenAICaptioner.OpenAICaptioner
+  system_prompt: You are a helpful assistant that describes objects in a single word.
+    You will be provided with up to 4 views of the same object. Describe the object
+    with a few words. You should generally use a single word, but you can use more
+    than one if needed (e.g., ice cream, toilet paper).
+  user_query: Describe the object in a few words.
+  max_images: 4
+  tag: true
+  bg_mask_mode: no_mask
+  allow_no_object_pred: true
+  no_object_prompt: If you believe there is no central object in the images or the
+    images depict a background element, output BACKGROUND.
+  force_reponse_prefix: true
+  prefix: The best description of the central object is
+  model: gpt-4o
+vlm_affordances:
+  _target_: concept_graphs.vlm.OpenAIAffordancePredictor.OpenAIAffordancePredictor
+  model: gpt-4o
+vlm_interactions:
+  _target_: concept_graphs.vlm.MolmoPointer.MolmoPointer
+  system_prompt: You are a helpful assistant that points at stuff. Point at stuff
+    given the user query.
+  skill_queries:
+    PICK UP: Point where you would pick the object.
+    BUTTON PRESS: Point where you would press a button.
+    OPEN: Point where you would interact to open the object.
+    SWITCH: Point where you could flip or activate a switch.
+  max_images: 1
+  bg_mask_mode: none
+  url: http://localhost:5000
+  api_key: your_api_key
+  max_tokens: 100
+ft_extraction:
+  _target_: concept_graphs.perception.ft_extraction.CLIP.CLIP
+  model_name: ViT-L-14
+  pretrained: laion2b_s32b_b82k
+  cache_dir: ${cache_dir}
+  device: ${device}
+name: cg-detector
+sim_thresh: 0.6
+overlap_eps: 0.005
+voxel_size: 0.005
+denoising_eps: 0.02
+max_points_pcd: 8000
+final_min_segments: 2
+dataset:
+  _target_: rgbd_dataset.rgbd_dataset.datasets.RGBD.RGBD
+  dataset_name: rgbd
+  base_path: /home/fordpinto/Downloads/locobot_data
+  scene: interactions_2
+  width: 640
+  height: 480
+  resized_width: -1
+  resized_height: -1
+  sequence_start: 0
+  sequence_end: -1
+  sequence_stride: 1
+  relative_pose: false
+  depth_scale: 1000.0
+  point_cloud: false
+  depth_trunc: 1.0
+  rgb_dir: rgb
+  depth_dir: depth
+  pose_dir: pose
+  intrinsics_dir: intrinsics
+  pose_dict: false
+cache_dir: /home/fordpinto/Documents/concept-nodes/checkpoints
+data_dir: /home/fordpinto/data
+output_dir: /home/fordpinto/Documents/functional-scene-graph/outputs
+device: cuda
+debug: true
+save_map: true
+seed: 123
+caption: true
+tag: true
+affordances: false
+interactions: false
+dataloader:
+  _target_: torch.utils.data.DataLoader
+  batch_size: 1
+  shuffle: false
+  num_workers: 2
+  pin_memory: false
+  collate_fn:
+    _target_: rgbd_dataset.rgbd_dataset.dataloader.collate_fn_np_single_cb

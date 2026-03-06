@@ -1,0 +1,10 @@
+
+defaults:
+  - meta: meta
+  - assetlookup: trellis
+  - skillprediction: none
+  - paths: default
+  - secrets: secrets
+  - assetfitting: rot_and_axisscale
+  - scene: robotplan
+  - parallelism: default

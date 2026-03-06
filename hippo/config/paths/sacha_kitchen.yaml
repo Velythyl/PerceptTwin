@@ -1,0 +1,8 @@
+scene_id: sacha_kitchen # "replica_room0_banner"
+
+conceptgraphs_dir: "./datasets"
+scene_dir: "${paths.conceptgraphs_dir}/${paths.scene_id}"
+
+out_subdir: "sacha_kitchen_maxing"
+out_dir: "./sampled_scenes"
+out_scene_dir: "${paths.out_dir}/${paths.out_subdir}/${paths.scene_id}/${assetlookup.method_human_readable_name}_${assetfitting.rotate}-${assetfitting.scaling}-${assetfitting.round_rot}_${now:%Y-%m-%d-%H-%M-%S}"

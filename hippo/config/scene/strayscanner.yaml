@@ -1,0 +1,13 @@
+wall_height: 3
+pad: [3,3,3,0] # 0,2, are together, 1,3 are together
+remove_obj_name_substr: ["interlocking mat"]  # removes any CG obj that contains any of the substrings in filter_obs
+remove_obj_desc_substr: [""]
+statistical_pcd_denoise_std: -1
+intake_swap_yz: True
+floor_material:  "PVCLit"
+wall_material: "EggshellDrywall"
+topdown_camera_y: "bounds_y"
+
+
+num_scenes_to_generate: 1
+scene_generation_method: "in_order"

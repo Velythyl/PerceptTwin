@@ -1,0 +1,8 @@
+
+defaults:
+  - meta: meta
+  - planner: smartllm
+  - feedback: conditiononly
+  - scene: knife_prep_vegetables
+  - paths: default
+  - secrets: secrets

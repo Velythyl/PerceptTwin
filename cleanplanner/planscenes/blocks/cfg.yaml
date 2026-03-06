@@ -1,0 +1,55 @@
+meta:
+  project: pvf
+  run_name: dev
+  tags: []
+  seed: -1
+  disable: true
+assetlookup:
+  method: TRELLIS
+  client_port: 39401
+  use_masks: true
+  clip_size_comparison_thresh: 100
+  clip_similarity_thresh: 28
+  clip_keep_top_k: 100
+  clear_TRELLIS_cache_for_this_scene: false
+  method_human_readable_name: TRELLIS-yes-mask
+  image_sequence_stride: 1
+  image_sequence_start: 0
+  image_sequence_end: 1
+  use_largest_mask_instead: false
+skillprediction:
+  method: gpt-4
+paths:
+  scene_id: i_box2_stacked
+  conceptgraphs_dir: ./datasets/realscenes
+  scene_dir: ${paths.conceptgraphs_dir}/${paths.scene_id}
+  out_subdir: realscenes
+  out_dir: ./sampled_scenes
+  out_scene_dir: ${paths.out_dir}/${paths.out_subdir}/${paths.scene_id}/${assetlookup.method_human_readable_name}_${assetfitting.rotate}-${assetfitting.scaling}-${assetfitting.round_rot}_${now:%Y-%m-%d-%H-%M-%S}
+secrets:
+  openai_key: ${load_file:${oc.env:HOME}/Holodeck/hippo/secrets/openai_api_key.txt}
+  hf_token: ${load_file:${oc.env:HOME}/Holodeck/hippo/secrets/hf_token.txt}
+assetfitting:
+  rotate: false
+  scaling: aspect weighted
+  round_rot: 90
+scene:
+  wall_height: 3
+  pad:
+  - 3
+  - 3
+  - 3
+  - 0
+  remove_obj_name_substr:
+  - interlocking mat
+  remove_obj_desc_substr:
+  - ''
+  intake_swap_yz: true
+  floor_material: PVCLit
+  wall_material: EggshellDrywall
+  topdown_camera_y: bounds_y
+  num_scenes_to_generate: 1
+  scene_generation_method: in_order
+parallelism:
+  composer_selves_max_workers: null
+  composer_concretizer_max_workers: null

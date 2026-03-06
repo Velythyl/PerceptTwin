@@ -1,0 +1,5 @@
+enabled: true
+conditions: true
+audits: true
+include_task_description_in_audit_prompt: false
+judge_llm: "gpt-5-2025-08-07"

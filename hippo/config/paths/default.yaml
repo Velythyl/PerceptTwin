@@ -1,0 +1,9 @@
+scene_id: i_anais_knife_4 #replica_room0_cg-detector_2025-06-10-20-16-50.243828 # "replica_room0_banner"
+
+
+conceptgraphs_dir: "./datasets/realscenes"
+scene_dir: "${paths.conceptgraphs_dir}/${paths.scene_id}"
+
+out_subdir: "tunedparams"
+out_dir: "./sampled_scenes"
+out_scene_dir: "${paths.out_dir}/${paths.out_subdir}/${paths.scene_id}/${assetlookup.method_human_readable_name}_${assetfitting.rotate}-${assetfitting.scaling}-${assetfitting.round_rot}_${now:%Y-%m-%d-%H-%M-%S}"

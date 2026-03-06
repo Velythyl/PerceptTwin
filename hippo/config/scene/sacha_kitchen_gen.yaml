@@ -1,0 +1,12 @@
+wall_height: 0.01
+pad: 0.5
+remove_obj_name_substr: ["interlocking mat"]  # removes any CG obj that contains any of the substrings in filter_obs
+remove_obj_desc_substr: [""]
+statistical_pcd_denoise_std: -1
+floor_material:  ["TexturesCom_MarbleWhite0067_1_seamless_S"]
+wall_material: "TexturesCom_MarbleWhite0067_1_seamless_S"
+topdown_camera_y: 1
+
+
+num_scenes_to_generate: 1
+scene_generation_method: "random"

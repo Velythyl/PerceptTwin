@@ -1,0 +1,13 @@
+method: CLIP
+clip_size_comparison_thresh: 0.1 # 0.1 is fair, 0.5 is coarse, 100 is disabled. 0.1 is less objects than 100
+clip_similarity_thresh: 28 # 28 is holodeck. 1 is more than 28, 20
+clip_keep_top_k: 3
+method_human_readable_name: "CLIP"
+
+lights_intensity: 0.1
+
+# unused 
+image_sequence_stride: 1
+image_sequence_start: 0
+image_sequence_end: 5
+use_largest_mask_instead: False

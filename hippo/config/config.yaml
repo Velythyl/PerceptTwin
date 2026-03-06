@@ -1,0 +1,10 @@
+
+defaults:
+  - meta: meta
+  - assetlookup: clip
+  - skillprediction: gpt4
+  - paths: default
+  - secrets: secrets
+  - assetfitting: rot_and_aspect_weighted
+  - scene: all_replica_scenes
+  - parallelism: default

@@ -1,0 +1,30 @@
+# @package hydra.launcher
+_target_: hydra_plugins.hydra_joblib_launcher.joblib_launcher.JoblibLauncher
+n_jobs: 3
+backend: null
+prefer: processes
+require: null
+verbose: 0
+timeout: null
+pre_dispatch: 2*n_jobs
+batch_size: auto
+temp_folder: null
+max_nbytes: null
+mmap_mode: r
+
+# module load cuda/12.1.1/cudnn
+# module load python/3.10
+#  python3.9 -m pip install --upgrade "jaxlib==0.4.13+cuda11.cudnn86" "jax[cuda11_pip]==0.4.13" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --no-cache
+# pip3 install -r requirements.txt
+# pip3 install flax==0.7.4
+#  python3.9 -m pip install --upgrade "jaxlib[cuda11_pip]==0.4.13" "jax[cuda11_pip]==0.4.13" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --no-cache
+# pip install hydra-submitit-launcher --upgrade
+# python3 main.py --multirun hydra/launcher=sbatch +hydra/sweep=sbatch wandb.seed=1,2
+# python3 main.py --multirun hydra/launcher=sbatch +hydra/sweep=sbatch sim=sim10k_10000 wandb.seed=1,2,3,4,5 sim.bad_init=False,True dist=four_bananas,rastrigin10d,rastrigin2d,michalewicz10d,michalewicz2d,five_mvn_dim10,rosenbrock10d,rosenbrock2d adapt=indep,mape_single,mape_test,haario,random_walk,mala wandb.project=milaclustermbrma
+
+
+#   - 'export WANDB_WATCH="false"'
+#  - 'export WANDB__SERVICE_WAIT=300'
+ # - 'export WANDB_MODE="offline"'
+#
+
