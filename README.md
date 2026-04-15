@@ -40,3 +40,6 @@ Please cite us using
 
 We would like to thank the Holodeck authors for their code release. If you use this codebase, please also cite [https://github.com/allenai/Holodeck](https://github.com/allenai/Holodeck). Please also cite  [https://concept-graphs.github.io/](https://concept-graphs.github.io/).
 
+We would like to thank the Denso Corporation for their financial support.
+
+We would like to thank NSERC for their financial support.
